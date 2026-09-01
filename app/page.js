@@ -573,9 +573,9 @@ export default function HomePage() {
               alt="Spyglass Insurance Agency, LLC logo"
               className="h-11 mb-3"
             />
-            <p>8501 N Mopac Expy STE 110<br />Austin, TX 78759</p>
+            <p>8501 N Mopac Exp, Ste 110<br />Austin, TX 78759</p>
             <p style={{ marginTop: '0.5rem' }}>
-              <a href="tel:5126402077">512-640-2077</a>
+              <a href="tel:5125989701">(512) 598-9701</a>
             </p>
           </div>
           <div>
