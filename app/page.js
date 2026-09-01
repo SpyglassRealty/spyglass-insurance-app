@@ -1,4 +1,7 @@
+import { getSortedPosts } from '../lib/posts';
+
 export default function HomePage() {
+  const posts = getSortedPosts();
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
@@ -352,34 +355,15 @@ export default function HomePage() {
             into major life and real estate decisions.
           </p>
           <div className="coverage-grid">
-            <article className="card" style={{ padding: '1.5rem' }}>
-              <h3 className="font-bold mb-2 text-lg">What Every Texas Homebuyer Should Know About Homeowners Insurance</h3>
-              <p className="text-sm text-spy-muted mb-3">
-                When to request quotes, what information you&apos;ll need, and how coverage interacts with your
-                contract and closing.
-              </p>
-              <a href="/learning/texas-homebuyer-homeowners-insurance" className="text-sm text-spy-orange font-semibold">
-                Read article
-              </a>
-            </article>
-            <article className="card" style={{ padding: '1.5rem' }}>
-              <h3 className="font-bold mb-2 text-lg">Why Texas Homeowners Insurance Rates Change</h3>
-              <p className="text-sm text-spy-muted mb-3">
-                Understand the market forces, weather patterns, and property details that can affect your premium.
-              </p>
-              <a href="/learning/why-texas-homeowners-rates-change" className="text-sm text-spy-orange font-semibold">
-                Read article
-              </a>
-            </article>
-            <article className="card" style={{ padding: '1.5rem' }}>
-              <h3 className="font-bold mb-2 text-lg">Do You Need Flood Insurance in Central Texas?</h3>
-              <p className="text-sm text-spy-muted mb-3">
-                Flood maps, local risk, and why some homeowners outside high-risk zones still choose coverage.
-              </p>
-              <a href="/learning/flood-insurance-central-texas" className="text-sm text-spy-orange font-semibold">
-                Read article
-              </a>
-            </article>
+            {posts.map((post) => (
+              <article key={post.slug} className="card" style={{ padding: '1.5rem' }}>
+                <h3 className="font-bold mb-2 text-lg">{post.title}</h3>
+                <p className="text-sm text-spy-muted mb-3">{post.description}</p>
+                <a href={`/learning/${post.slug}`} className="text-sm text-spy-orange font-semibold">
+                  Read article
+                </a>
+              </article>
+            ))}
           </div>
         </div>
       </section>
