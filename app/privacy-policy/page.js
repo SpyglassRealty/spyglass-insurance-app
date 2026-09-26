@@ -5,13 +5,13 @@
  * reviewed by an attorney. Update if data practices, vendors or analytics change.
  */
 import LegalPage from "../components/LegalPage";
-import { BUSINESS } from "../lib/site";
+import { BUSINESS, pageMetadata } from "../lib/site";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Privacy Policy",
   description: `How ${BUSINESS.legalName} collects and uses information submitted through this website.`,
-  alternates: { canonical: "/privacy-policy" },
-};
+  path: "/privacy-policy",
+});
 
 export default function PrivacyPolicyPage() {
   return (

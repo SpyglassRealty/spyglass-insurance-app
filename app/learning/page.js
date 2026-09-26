@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { ARTICLES } from "../lib/articles";
+import { pageMetadata } from "../lib/site";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
-export const metadata = {
-  title: "Learning Center | Spyglass Insurance Agency",
+export const metadata = pageMetadata({
+  title: "Learning Center",
   description:
     "Plain-English guides for Texas homeowners, buyers, and property owners on insurance, premiums, and flood coverage.",
-};
+  path: "/learning",
+});
 
 export default function LearningIndexPage() {
   return (

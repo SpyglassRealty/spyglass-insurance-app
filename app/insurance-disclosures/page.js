@@ -3,13 +3,13 @@
  * License numbers below were supplied by the agency owner; confirm against TDI records.
  */
 import LegalPage from "../components/LegalPage";
-import { BUSINESS } from "../lib/site";
+import { BUSINESS, pageMetadata } from "../lib/site";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Insurance Disclosures",
   description: `Licensing and insurance disclosures for ${BUSINESS.legalName}.`,
-  alternates: { canonical: "/insurance-disclosures" },
-};
+  path: "/insurance-disclosures",
+});
 
 export default function InsuranceDisclosuresPage() {
   return (

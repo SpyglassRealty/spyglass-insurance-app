@@ -3,13 +3,13 @@
  * Conservative accessibility statement. Makes no claim of full WCAG conformance.
  */
 import LegalPage from "../components/LegalPage";
-import { BUSINESS } from "../lib/site";
+import { BUSINESS, pageMetadata } from "../lib/site";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Accessibility",
   description: `${BUSINESS.name} accessibility statement and how to request assistance.`,
-  alternates: { canonical: "/accessibility" },
-};
+  path: "/accessibility",
+});
 
 export default function AccessibilityPage() {
   return (

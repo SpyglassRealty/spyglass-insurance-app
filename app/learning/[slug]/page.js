@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ARTICLES, getArticle } from "../../lib/articles";
+import { pageMetadata } from "../../lib/site";
 import { SiteFooter, SiteHeader } from "../../components/SiteChrome";
 
 export function generateStaticParams() {
@@ -9,11 +10,14 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }) {
   const article = getArticle(params.slug);
-  if (!article) return { title: "Article | Spyglass Insurance" };
-  return {
-    title: `${article.title} | Spyglass Insurance Agency`,
+  if (!article) return { title: "Article" };
+  return pageMetadata({
+    title: article.title,
     description: article.dek,
-  };
+    path: `/learning/${article.slug}`,
+    type: "article",
+    image: { url: article.img, width: 1600, alt: "" },
+  });
 }
 
 export default function LearningArticlePage({ params }) {

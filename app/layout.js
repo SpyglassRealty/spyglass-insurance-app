@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Archivo } from "next/font/google";
+import { OG_IMAGE, SITE_URL } from "./lib/site";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -8,10 +9,33 @@ const archivo = Archivo({
   variable: "--font-archivo",
 });
 
+const DEFAULT_DESCRIPTION =
+  "Independent Texas insurance agency in Austin. We shop multiple carriers, explain the fine print in plain English, and stay with you long after the policy is bound.";
+
+// Canonicals are set per page (alternates.canonical) and resolve against
+// metadataBase, so every page points at the apex host.
 export const metadata = {
-  title: "Spyglass Insurance Agency",
-  description:
-    "Independent Texas insurance agency. We shop multiple carriers, explain the fine print in plain English, and stay with you long after the policy is bound.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Spyglass Insurance Agency",
+    template: "%s | Spyglass Insurance Agency",
+  },
+  description: DEFAULT_DESCRIPTION,
+  applicationName: "Spyglass Insurance Agency",
+  openGraph: {
+    type: "website",
+    siteName: "Spyglass Insurance Agency",
+    locale: "en_US",
+    title: "Spyglass Insurance Agency",
+    description: DEFAULT_DESCRIPTION,
+    images: [OG_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Spyglass Insurance Agency",
+    description: DEFAULT_DESCRIPTION,
+    images: [OG_IMAGE.url],
+  },
 };
 
 export default function RootLayout({ children }) {

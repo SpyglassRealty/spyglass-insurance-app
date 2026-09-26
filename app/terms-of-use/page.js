@@ -3,13 +3,13 @@
  * Plain, conservative placeholder terms. Not reviewed by an attorney.
  */
 import LegalPage from "../components/LegalPage";
-import { BUSINESS } from "../lib/site";
+import { BUSINESS, pageMetadata } from "../lib/site";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Terms of Use",
   description: `Terms that apply to use of the ${BUSINESS.name} website.`,
-  alternates: { canonical: "/terms-of-use" },
-};
+  path: "/terms-of-use",
+});
 
 export default function TermsOfUsePage() {
   return (
