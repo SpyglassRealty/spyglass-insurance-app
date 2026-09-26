@@ -220,9 +220,9 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
           <div>
             <img src="/spyglass-insurance-assets/logo-white.svg" alt="Spyglass Insurance" className="h-12 mb-3" />
-            <p>8501 N Mopac Exp, Ste 110<br />Austin, TX 78759</p>
+            <p>8501 N Mopac Expy STE 110<br />Austin, TX 78759</p>
             <p className="mt-2">
-              <a href="tel:5125989701">(512) 598-9701</a>
+              <a href="tel:+15125989701">(512) 598-9701</a>
             </p>
           </div>
           <div>
