@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ARTICLES, getArticle } from "../../lib/articles";
+import { ARTICLES, formatDate, getArticle } from "../../lib/articles";
+import { cardImageProps, unsplash, unsplashSrcSet } from "../../lib/images";
 import { pageMetadata } from "../../lib/site";
 import { SiteFooter, SiteHeader } from "../../components/SiteChrome";
 
@@ -31,7 +32,14 @@ export default function LearningArticlePage({ params }) {
       <SiteHeader />
       <main>
         <div className="si-article-hero">
-          <img src={article.img} alt="" className="si-article-hero-img" />
+          <img
+            src={unsplash(article.img, 1600)}
+            srcSet={unsplashSrcSet(article.img, [828, 1280, 1600])}
+            sizes="100vw"
+            alt=""
+            className="si-article-hero-img"
+            fetchpriority="high"
+          />
           <div className="si-article-hero-scrim" aria-hidden="true" />
           <div className="si-wrap si-article-hero-copy">
             <Link href="/learning" className="si-link-acc" style={{ marginTop: 0 }}>
@@ -47,6 +55,8 @@ export default function LearningArticlePage({ params }) {
               {article.dek}
             </p>
             <p className="si-body" style={{ marginTop: 12 }}>
+              By {article.author} · Published{" "}
+              <time dateTime={article.datePublished}>{formatDate(article.datePublished)}</time> ·{" "}
               {article.readMinutes} min read · Educational only — not a policy or quote
             </p>
           </div>
@@ -54,6 +64,13 @@ export default function LearningArticlePage({ params }) {
 
         <article className="si-section" style={{ paddingTop: 64 }}>
           <div className="si-wrap si-article-prose">
+            {article.answer ? (
+              <section className="si-article-block">
+                <p className="si-article-answer">
+                  <strong>{article.answer}</strong>
+                </p>
+              </section>
+            ) : null}
             {article.sections.map((sec) => (
               <section key={sec.h} className="si-article-block">
                 <h2>{sec.h}</h2>
@@ -85,7 +102,7 @@ export default function LearningArticlePage({ params }) {
                 <div className="si-learn-grid" style={{ marginTop: 24 }}>
                   {others.map((a) => (
                     <Link key={a.slug} href={`/learning/${a.slug}`} className="si-article">
-                      <img className="si-article-img" src={a.img} alt="" />
+                      <img className="si-article-img" alt="" {...cardImageProps(a.img)} />
                       <div className="si-article-body">
                         <div className="si-article-tag">{a.tag}</div>
                         <h3 className="si-article-title">{a.title}</h3>

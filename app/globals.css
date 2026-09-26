@@ -1409,3 +1409,11 @@ textarea.si-input {
 .si-legal a {
   color: var(--acc);
 }
+
+/* Answer-first summary at the top of learning articles */
+.si-article-block p.si-article-answer {
+  color: var(--txt);
+  font-size: 19px;
+  border-left: 3px solid var(--acc);
+  padding-left: 18px;
+}

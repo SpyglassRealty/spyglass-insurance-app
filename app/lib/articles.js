@@ -1,6 +1,12 @@
+// datePublished = date the articles were first added to the codebase (Aug 6, 2026).
+// author = the agency (organization). Change either if Ryan prefers otherwise.
 export const ARTICLES = [
   {
     slug: "texas-homebuyer-homeowners-insurance",
+    datePublished: "2026-08-06",
+    author: "Spyglass Insurance Agency",
+    answer:
+      "Start requesting homeowners insurance quotes as soon as you go under contract — or earlier, while you are seriously touring — so there is time to compare carriers, meet your lender's proof-of-coverage requirement, and catch roof or deductible surprises before closing.",
     tag: "Homebuying",
     title: "What every Texas homebuyer should know about insurance",
     dek: "When to request quotes, what you'll need, and how coverage interacts with your contract and closing.",
@@ -51,6 +57,10 @@ export const ARTICLES = [
   },
   {
     slug: "why-texas-homeowners-rates-change",
+    datePublished: "2026-08-06",
+    author: "Spyglass Insurance Agency",
+    answer:
+      "Texas homeowners insurance rates change mostly because of statewide storm losses, reinsurance costs and carrier appetite, plus property details like roof age and claims history — which is why a premium can rise at renewal even if you never filed a claim.",
     tag: "Premiums",
     title: "Why Texas homeowners insurance rates change",
     dek: "The market forces, weather patterns and property details that move your premium.",
@@ -92,6 +102,10 @@ export const ARTICLES = [
   },
   {
     slug: "flood-insurance-central-texas",
+    datePublished: "2026-08-06",
+    author: "Spyglass Insurance Agency",
+    answer:
+      "Often, yes. Standard homeowners policies generally exclude flood, and Central Texas flash flooding can reach properties outside FEMA's high-risk zones, so flood coverage is worth pricing even when your lender does not require it.",
     tag: "Flood",
     title: "Do you need flood insurance in Central Texas?",
     dek: "Flood maps, local risk, and why owners outside high-risk zones still buy it.",
@@ -136,4 +150,13 @@ export const ARTICLES = [
 
 export function getArticle(slug) {
   return ARTICLES.find((a) => a.slug === slug) || null;
+}
+
+export function formatDate(iso) {
+  return new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  });
 }

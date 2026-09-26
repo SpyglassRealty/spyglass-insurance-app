@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ARTICLES } from "../lib/articles";
 import { pageMetadata } from "../lib/site";
+import { cardImageProps } from "../lib/images";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata = pageMetadata({
@@ -28,7 +29,7 @@ export default function LearningIndexPage() {
           <div className="si-learn-grid" style={{ marginTop: 48 }}>
             {ARTICLES.map((a) => (
               <Link key={a.slug} href={`/learning/${a.slug}`} className="si-article">
-                <img className="si-article-img" src={a.img} alt="" />
+                <img className="si-article-img" alt="" {...cardImageProps(a.img)} />
                 <div className="si-article-body">
                   <div className="si-article-tag">{a.tag}</div>
                   <h2 className="si-article-title">{a.title}</h2>

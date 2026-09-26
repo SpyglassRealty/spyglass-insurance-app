@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { SiteFooter } from "./components/SiteChrome";
+import { cardImageProps, unsplash, unsplashSrcSet } from "./lib/images";
 
 const COVERAGES = [
   {
@@ -357,7 +358,13 @@ export default function HomeClient() {
       {/* Hero */}
       <section id="top" className="si-hero">
         <div className="si-hero-bg" aria-hidden="true">
-          <img src={HERO_IMG} alt="" />
+          <img
+            src={unsplash(HERO_IMG, 1920)}
+            srcSet={unsplashSrcSet(HERO_IMG, [828, 1280, 1920])}
+            sizes="100vw"
+            alt=""
+            fetchpriority="high"
+          />
         </div>
         <div className="si-hero-scrim" aria-hidden="true" />
         <div className="si-hero-grid">
@@ -604,13 +611,22 @@ export default function HomeClient() {
           <div className="si-std-grid">
             <div className="si-arch-wrap" data-reveal>
               <div className="si-arch-frame">
-                <img src={ARCH_IMG} alt="Austin home exterior" />
+                <img
+                  src={unsplash(ARCH_IMG, 1000)}
+                  srcSet={unsplashSrcSet(ARCH_IMG, [640, 1000])}
+                  sizes="(max-width: 900px) 100vw, 50vw"
+                  alt="Austin home exterior"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <div className="si-backed-card">
                 <div className="tiny">BACKED BY</div>
                 <img
                   src="/spyglass-insurance-assets/spyglass-logo-white.png"
                   alt="Spyglass Realty"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <p>One of Austin&apos;s leading independent brokerages.</p>
               </div>
@@ -694,7 +710,7 @@ export default function HomeClient() {
           <div className="si-learn-grid">
             {ARTICLES.map((a) => (
               <a key={a.href} href={a.href} className="si-article">
-                <img className="si-article-img" src={a.img} alt="" />
+                <img className="si-article-img" alt="" {...cardImageProps(a.img)} />
                 <div className="si-article-body">
                   <div className="si-article-tag">{a.tag}</div>
                   <h3 className="si-article-title">{a.title}</h3>
