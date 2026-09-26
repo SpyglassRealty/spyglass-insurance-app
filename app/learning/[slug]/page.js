@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { ARTICLES, formatDate, getArticle } from "../../lib/articles";
 import { cardImageProps, unsplash, unsplashSrcSet } from "../../lib/images";
 import { pageMetadata } from "../../lib/site";
+import { articleSchema, breadcrumbSchema } from "../../lib/schema";
+import JsonLd from "../../components/JsonLd";
 import { SiteFooter, SiteHeader } from "../../components/SiteChrome";
 
 export function generateStaticParams() {
@@ -29,6 +31,16 @@ export default function LearningArticlePage({ params }) {
 
   return (
     <div className="si-page">
+      <JsonLd
+        data={[
+          articleSchema(article),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Learning center", path: "/learning" },
+            { name: article.title, path: `/learning/${article.slug}` },
+          ]),
+        ]}
+      />
       <SiteHeader />
       <main>
         <div className="si-article-hero">

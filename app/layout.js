@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Archivo } from "next/font/google";
 import { OG_IMAGE, SITE_URL } from "./lib/site";
+import { agencySchema } from "./lib/schema";
+import JsonLd from "./components/JsonLd";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -41,7 +43,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={archivo.variable}>
-      <body className={archivo.className}>{children}</body>
+      <body className={archivo.className}>
+        <JsonLd data={agencySchema()} />
+        {children}
+      </body>
     </html>
   );
 }
