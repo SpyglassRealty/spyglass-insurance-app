@@ -4,6 +4,8 @@ import { SITE_URL } from "./lib/site";
 // Static marketing + legal pages. Add new routes here when they are created.
 const STATIC_ROUTES = [
   { path: "/", priority: 1.0, changeFrequency: "monthly" },
+  { path: "/homeowners-insurance", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/flood-insurance", priority: 0.8, changeFrequency: "monthly" },
   { path: "/learning", priority: 0.7, changeFrequency: "weekly" },
   { path: "/insurance-disclosures", priority: 0.3, changeFrequency: "yearly" },
   { path: "/privacy-policy", priority: 0.2, changeFrequency: "yearly" },

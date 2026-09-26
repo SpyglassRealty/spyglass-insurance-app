@@ -2,11 +2,11 @@ import Link from "next/link";
 import { BUSINESS } from "../lib/site";
 
 const FOOTER_COVERAGE = [
-  { label: "Homeowners", href: "/#coverage" },
+  { label: "Homeowners", href: "/homeowners-insurance" },
   { label: "Auto", href: "/#coverage" },
   { label: "Umbrella", href: "/#coverage" },
   { label: "Landlord", href: "/#coverage" },
-  { label: "Flood", href: "/#coverage" },
+  { label: "Flood", href: "/flood-insurance" },
   { label: "Renters", href: "/#coverage" },
 ];
 
