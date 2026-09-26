@@ -1397,3 +1397,15 @@ textarea.si-input {
     transform: none;
   }
 }
+
+/* Legal / policy pages */
+.si-legal ul {
+  color: var(--mut);
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0 0 14px;
+  padding-left: 22px;
+}
+.si-legal a {
+  color: var(--acc);
+}

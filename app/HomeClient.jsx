@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { SiteFooter } from "./components/SiteChrome";
 
 const COVERAGES = [
   {
@@ -850,85 +851,7 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="si-footer">
-        <div className="si-footer-grid">
-          <div className="si-footer-brand">
-            <img
-              src="/spyglass-insurance-assets/logo-white.svg"
-              alt="Spyglass Insurance"
-            />
-            <div className="agency">Agency</div>
-            <address>
-              8501 N Mopac Expy STE 110
-              <br />
-              Austin, TX 78759
-              <br />
-              <a href="tel:+15125989701">(512) 598-9701</a>
-            </address>
-          </div>
-          <div>
-            <h4>Coverage</h4>
-            <ul>
-              {[
-                "Homeowners",
-                "Auto",
-                "Umbrella",
-                "Landlord",
-                "Flood",
-                "Renters",
-                "Commercial",
-                "Professional Liability & E&O",
-              ].map((item) => (
-                <li key={item}>
-                  <a href="#coverage">{item}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h4>Company</h4>
-            <ul>
-              <li>
-                <a href="https://www.spyglassrealty.com/" target="_blank" rel="noreferrer">
-                  Spyglass Realty
-                </a>
-              </li>
-              <li>
-                <a href="/learning">Blog</a>
-              </li>
-              <li>
-                <a href="/team-login">Team login</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4>Contact &amp; legal</h4>
-            <ul>
-              <li>
-                <a href="mailto:insurance@spyglassinsurance.com">insurance@spyglassinsurance.com</a>
-              </li>
-              <li>
-                <a href="/privacy-policy">Privacy policy</a>
-              </li>
-              <li>
-                <a href="/terms-of-use">Terms of use</a>
-              </li>
-              <li>
-                <a href="/accessibility">Accessibility</a>
-              </li>
-              <li>
-                <a href="/insurance-disclosures">Insurance disclosures</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="si-footer-legal">
-          © 2026 Spyglass Insurance Agency, LLC. All rights reserved. Texas agency license number:
-          [To be added once issued] · No coverage or savings are guaranteed; all policies are subject
-          to underwriting and eligibility.
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

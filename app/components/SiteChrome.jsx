@@ -1,4 +1,14 @@
 import Link from "next/link";
+import { BUSINESS } from "../lib/site";
+
+const FOOTER_COVERAGE = [
+  { label: "Homeowners", href: "/#coverage" },
+  { label: "Auto", href: "/#coverage" },
+  { label: "Umbrella", href: "/#coverage" },
+  { label: "Landlord", href: "/#coverage" },
+  { label: "Flood", href: "/#coverage" },
+  { label: "Renters", href: "/#coverage" },
+];
 
 export function SiteHeader() {
   return (
@@ -40,22 +50,23 @@ export function SiteFooter() {
           <img
             src="/spyglass-insurance-assets/logo-white.svg"
             alt="Spyglass Insurance Agency, LLC"
+            loading="lazy"
           />
           <div className="agency">Agency</div>
           <address>
-            8501 N Mopac Expy STE 110
+            {BUSINESS.street}
             <br />
-            Austin, TX 78759
+            {BUSINESS.city}, {BUSINESS.region} {BUSINESS.postalCode}
             <br />
-            <a href="tel:+15125989701">(512) 598-9701</a>
+            <a href={`tel:${BUSINESS.phoneE164}`}>{BUSINESS.phoneDisplay}</a>
           </address>
         </div>
         <div>
           <h4>Coverage</h4>
           <ul>
-            {["Homeowners", "Auto", "Umbrella", "Landlord", "Flood", "Renters"].map((item) => (
-              <li key={item}>
-                <Link href="/#coverage">{item}</Link>
+            {FOOTER_COVERAGE.map((item) => (
+              <li key={item.label}>
+                <Link href={item.href}>{item.label}</Link>
               </li>
             ))}
           </ul>
@@ -64,7 +75,7 @@ export function SiteFooter() {
           <h4>Company</h4>
           <ul>
             <li>
-              <a href="https://www.spyglassrealty.com/" target="_blank" rel="noreferrer">
+              <a href={BUSINESS.sisterBrandUrl} target="_blank" rel="noreferrer">
                 Spyglass Realty
               </a>
             </li>
@@ -77,17 +88,30 @@ export function SiteFooter() {
           <h4>Contact &amp; legal</h4>
           <ul>
             <li>
-              <a href="mailto:insurance@spyglassinsurance.com">insurance@spyglassinsurance.com</a>
+              <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
             </li>
             <li>
               <Link href="/#quote">Get a quote</Link>
+            </li>
+            <li>
+              <Link href="/privacy-policy">Privacy policy</Link>
+            </li>
+            <li>
+              <Link href="/terms-of-use">Terms of use</Link>
+            </li>
+            <li>
+              <Link href="/accessibility">Accessibility</Link>
+            </li>
+            <li>
+              <Link href="/insurance-disclosures">Insurance disclosures</Link>
             </li>
           </ul>
         </div>
       </div>
       <div className="si-footer-legal">
-        © 2026 Spyglass Insurance Agency, LLC. All rights reserved. Educational content only — not a
-        binder of coverage. Policies are subject to underwriting and eligibility.
+        © {new Date().getFullYear()} {BUSINESS.legalName}. All rights reserved.{" "}
+        {BUSINESS.licenseLine}. Educational content only — not a binder of coverage. No coverage or
+        savings are guaranteed; all policies are subject to underwriting and eligibility.
       </div>
     </footer>
   );
