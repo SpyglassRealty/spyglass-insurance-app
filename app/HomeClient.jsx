@@ -55,6 +55,10 @@ const COVERAGES = [
   },
 ];
 
+// Heading count is derived from the list so they can never disagree.
+const NUMBER_WORDS = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve"];
+const coverageCountWord = NUMBER_WORDS[COVERAGES.length] || String(COVERAGES.length);
+
 const CAPTIVE = [
   "Quotes from one insurance company",
   "Options limited to that carrier's products",
@@ -374,6 +378,7 @@ export default function HomeClient() {
               Many carriers. One advisor.
             </div>
             <h1 className="si-h1">
+              <span className="si-h1-kicker">Independent insurance agency · Austin, Texas</span>
               Your home is the
               <br />
               biggest thing you own.
@@ -559,7 +564,7 @@ export default function HomeClient() {
           <div className="si-coverage-head" data-reveal>
             <div>
               <div className="si-eyebrow">Coverage</div>
-              <h2 className="si-h2">Eight ways we protect Texans.</h2>
+              <h2 className="si-h2">{coverageCountWord} ways we protect Texans.</h2>
             </div>
             <p>Tap any coverage to see what it actually does — and what it doesn&apos;t.</p>
           </div>
