@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { ARTICLES, formatDate, getArticle } from "../../lib/articles";
 import { cardImageProps, unsplash, unsplashSrcSet } from "../../lib/images";
 import { pageMetadata } from "../../lib/site";
-import { articleSchema, breadcrumbSchema } from "../../lib/schema";
+import { articleSchema, breadcrumbSchema, faqPageSchema } from "../../lib/schema";
 import JsonLd from "../../components/JsonLd";
 import { SiteFooter, SiteHeader } from "../../components/SiteChrome";
 
@@ -39,6 +39,7 @@ export default function LearningArticlePage({ params }) {
             { name: "Learning center", path: "/learning" },
             { name: article.title, path: `/learning/${article.slug}` },
           ]),
+          ...(article.faqs?.length ? [faqPageSchema(article.faqs)] : []),
         ]}
       />
       <SiteHeader />
@@ -91,6 +92,55 @@ export default function LearningArticlePage({ params }) {
                 ))}
               </section>
             ))}
+
+            {article.faqs?.length ? (
+              <section className="si-article-block">
+                <h2>Frequently asked questions</h2>
+                {article.faqs.map((f) => (
+                  <div key={f.q}>
+                    <h3>{f.q}</h3>
+                    <p>{f.a}</p>
+                  </div>
+                ))}
+              </section>
+            ) : null}
+
+            {article.related?.length ? (
+              <section className="si-article-block">
+                <h2>Related guides</h2>
+                <ul>
+                  {article.related.map((r) => (
+                    <li key={r.slug}>
+                      <Link href={`/learning/${r.slug}`} className="si-link-acc">
+                        {r.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
+
+            {article.sources?.length ? (
+              <section className="si-article-block">
+                <h2>Sources</h2>
+                <ul>
+                  {article.sources.map((s) => (
+                    <li key={s.url}>
+                      <a href={s.url} target="_blank" rel="noopener noreferrer">
+                        {s.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <p>
+                  <em>
+                    Educational information only, current as of the publish date. Not legal advice and
+                    not a guarantee of coverage, eligibility or rates; all policies are subject to
+                    underwriting and the terms of the policy.
+                  </em>
+                </p>
+              </section>
+            ) : null}
 
             <div className="si-article-cta">
               <h2>Ready to talk through your situation?</h2>
