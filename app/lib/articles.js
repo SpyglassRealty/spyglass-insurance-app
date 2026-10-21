@@ -1,4 +1,5 @@
 // datePublished = date the articles were first added to the codebase (Aug 6, 2026).
+// Optional fields: faqs (rendered + FAQPage schema), related (cross-links), sources (citations + disclaimer).
 // author = the agency (organization). Change either if Ryan prefers otherwise.
 export const ARTICLES = [
   {
@@ -144,6 +145,175 @@ export const ARTICLES = [
           "Spyglass Insurance Agency can help you sort required vs. optional coverage and explain tradeoffs without jargon.",
         ],
       },
+    ],
+  },
+  {
+    slug: "texas-fair-plan-wind-hail-deductible",
+    datePublished: "2026-10-21",
+    author: "Spyglass Insurance Agency",
+    answer:
+      "No. The Texas FAIR Plan Association (TFPA) eliminated the 1% wind and hail deductible for homeowners policies on or after July 1, 2026. The lowest wind and hail option is now 2%, and existing FAIR Plan homeowners policies with a 1% wind and hail deductible change to 2% automatically at renewal.",
+    tag: "Texas FAIR Plan",
+    title: "Can you still get a 1% wind and hail deductible from the Texas FAIR Plan?",
+    dek: "What changed on July 1, 2026, what the FAIR Plan is, who ends up there, and why it pays to shop the regular market first.",
+    img: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1600&q=80",
+    readMinutes: 5,
+    sections: [
+      {
+        h: "What changed on July 1, 2026",
+        p: [
+          "In a notice published April 27, 2026, TFPA announced deductible changes for its homeowners policies, approved by the Texas Department of Insurance (TDI) after a vote by the TFPA Governing Committee. On or after July 1, 2026, the 1% wind and hail deductible option is eliminated for TFPA homeowners policies.",
+          "Available wind and hail deductibles are now 2%, 3%, 4% and 5%. All other perils deductibles are available at 1%, 2%, 3%, 4% and 5%, and separate (split) deductibles for wind and hail and for all other perils are permitted.",
+          "If you already have a FAIR Plan homeowners policy with a 1% wind and hail deductible, it changes to 2% automatically at renewal. TFPA also says deductibles cannot be changed on policies currently in force, and that a Notice of TFPA Deductible Option Changes is included in renewal offer and policy packets.",
+        ],
+      },
+      {
+        h: "What a 2% deductible means in dollars",
+        p: [
+          "Percentage deductibles are generally figured on your dwelling coverage amount, not on the size of the claim. As simple math, on a home insured for $300,000, 1% is $3,000 and 2% is $6,000. Check your own declarations page for the exact amount and how your policy applies it.",
+        ],
+      },
+      {
+        h: "What the Texas FAIR Plan is",
+        p: [
+          "TFPA says it was established by the Texas Legislature to provide essential property insurance for eligible Texas property owners when no one else will. It describes itself as providing coverage to properties that are denied by other insurance carriers, and says it does not compete with the private market.",
+        ],
+      },
+      {
+        h: "Who ends up on the FAIR Plan",
+        p: [
+          "According to TFPA, applicants must have two declinations from other insurers to obtain coverage. In practice, that usually means homeowners who were turned down by regular (voluntary-market) carriers or who received a nonrenewal and could not find replacement coverage.",
+          "Since January 1, 2026, Texas law (HB 2067) requires insurance companies to tell you in writing why they declined, canceled or didn't renew your home insurance, according to TDI. That written reason can help you fix an issue, such as unrepaired prior damage, that may make your home insurable in the regular market again.",
+        ],
+      },
+      {
+        h: "Shop the voluntary market first",
+        p: [
+          "TFPA's own website tells people to find an agent before qualifying for TFPA. An independent agency like Spyglass Insurance Agency can quote your home with the carriers we represent before you settle for a policy of last resort, and can review your FAIR Plan policy at renewal to see whether a regular-market option has opened up.",
+          "If the FAIR Plan is the right fit, we can walk you through the deductible choices above, including whether a split deductible makes sense for you. Rates in the regular market are also moving in different directions by carrier this year; see our guide to shopping your Texas homeowners renewal.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Can I still get a 1% wind and hail deductible from the Texas FAIR Plan?",
+        a: "No. For TFPA homeowners policies on or after July 1, 2026, the 1% wind and hail deductible option is eliminated. Wind and hail deductibles are available at 2%, 3%, 4% and 5%.",
+      },
+      {
+        q: "What happens to my existing FAIR Plan policy with a 1% deductible?",
+        a: "TFPA says all current homeowners policies with a 1% wind and hail deductible will automatically change to 2% at policy renewal. Deductibles cannot be changed on policies currently in force.",
+      },
+      {
+        q: "Can I still get a 1% deductible for other perils?",
+        a: "Yes. TFPA lists all other perils deductibles of 1%, 2%, 3%, 4% and 5%, and allows separate (split) deductibles for wind and hail and for all other perils.",
+      },
+      {
+        q: "Who qualifies for the Texas FAIR Plan?",
+        a: "TFPA says applicants must have two declinations from other insurers to obtain coverage. It provides coverage for eligible properties denied by other carriers.",
+      },
+      {
+        q: "Should I go straight to the FAIR Plan if I was nonrenewed?",
+        a: "Not necessarily. TFPA itself suggests finding an agent first. An independent agency can check regular-market carriers before you apply for a FAIR Plan policy.",
+      },
+    ],
+    related: [
+      { slug: "shopping-texas-homeowners-renewal", label: "Shopping your Texas homeowners renewal: rates are mixed, so check your carrier" },
+    ],
+    sources: [
+      { label: "Texas FAIR Plan Association, “TFPA Deductible Changes Effective July 1, 2026” (published April 27, 2026)", url: "https://www.texasfairplan.org/news-and-announcements/tfpa-deductible-changes-effective-july-1-2026/" },
+      { label: "Texas FAIR Plan Association, home page (“We Insure Texans”)", url: "https://www.texasfairplan.org/" },
+      { label: "Texas Department of Insurance, “Know why your auto or home policy was declined, canceled, not renewed” (February 24, 2026)", url: "https://www.tdi.texas.gov/news/2026/tdi02232026.html" },
+    ],
+  },
+  {
+    slug: "shopping-texas-homeowners-renewal",
+    datePublished: "2026-10-21",
+    author: "Spyglass Insurance Agency",
+    answer:
+      "Texas homeowners rates are mixed in 2026, not simply falling. More insurers have filed cuts than increases this year, but six of the ten largest Texas home insurers filed increases, including State Farm Lloyds (4.0%, pending) and Allstate (8.0%). The only way to know what your renewal will do is to check your own carrier's filing and your renewal notice, then compare quotes.",
+    tag: "Renewals",
+    title: "Shopping your Texas homeowners renewal: rates are mixed, so check your carrier",
+    dek: "What the 2026 rate filings actually show, why the headline average may not match your bill, and a renewal checklist.",
+    img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80",
+    readMinutes: 6,
+    sections: [
+      {
+        h: "The good news: more cuts are being filed",
+        p: [
+          "On October 8, 2026, TDI said most homeowners insurance companies that filed rate changes since July 1 proposed decreases, affecting about 700,000 Texas policyholders, and that filed homeowners rate changes over the past 90 days averaged a 4.3% decrease. Examples TDI named: ASI Lloyds filed a 6% decrease and Texas Farm Bureau Mutual filed a 5.2% decrease.",
+          "An October 15, 2026 analysis of TDI's rate-filing data by FiledRates found the same turn. Among filings TDI received from January 1 through October 6, 2026, decreases outnumbered increases 51 to 30. In 2023, the count was 213 increases and 7 decreases.",
+        ],
+      },
+      {
+        h: "The catch: many of the biggest insurers still raised",
+        p: [
+          "Counting filings treats a small insurer's cut the same as a large insurer's increase. FiledRates found that six of the ten largest Texas homeowners insurers filed increases in 2026, led by State Farm Lloyds (4.0%, still pending) and Allstate Vehicle and Property Insurance Company (8.0%).",
+          "Among TDI's 40 largest homeowners insurers, the 16 companies that filed only increases in 2026 held 58.7% of 2024 Texas homeowners premium, while the 10 that filed only decreases held 13.0%. Many of the companies now cutting had raised rates sharply in 2023 and 2024.",
+          "Bottom line: whether your premium goes up or down depends heavily on which company insures you.",
+        ],
+      },
+      {
+        h: "Why the average may not match your bill",
+        p: [
+          "A filing's percentage is an estimate of the overall effect on a company's existing policyholders. FiledRates notes that a single policy can move more or less, and some filings cover only one of a company's programs. Your renewal can also change because of your coverage amount, deductible, roof, claims or discounts.",
+        ],
+      },
+      {
+        h: "A Texas renewal checklist",
+        p: [
+          "1) Read your renewal notice and compare premium, dwelling coverage and deductibles to last year.\n2) Look up your carrier's recent filings with TDI's home and auto rate filings search.\n3) Ask whether you qualify for mitigation discounts, such as for an impact-resistant or FORTIFIED roof.\n4) If you were nonrenewed, read the written reason your insurer must now provide.\n5) Get comparison quotes before the renewal date, not after.",
+        ],
+      },
+      {
+        h: "Ask about roof and mitigation discounts",
+        p: [
+          "In Commissioner's Bulletin B-0008-26 (September 16, 2026), TDI encouraged property and casualty insurers to develop meaningful, actuarially supported premium discounts for homeowners who invest in loss mitigation, including building or retrofitting to IBHS FORTIFIED Home standards, using impact-resistant roofing, and protecting against wildfire. The bulletin encourages discounts; it does not require a specific discount amount, so ask each carrier what it offers.",
+        ],
+      },
+      {
+        h: "If you get a nonrenewal instead",
+        p: [
+          "Under HB 2067, Texas insurance companies must tell you in writing why they declined, canceled or didn't renew your auto or home insurance, for decisions after January 1, 2026, according to TDI. If no regular carrier will write your home, the Texas FAIR Plan may be an option, but note its homeowners policies no longer offer a 1% wind and hail deductible.",
+        ],
+      },
+      {
+        h: "How an independent agency helps",
+        p: [
+          "TDI's commissioner urged Texans to shop around, and TDI notes nearly 160 companies sell auto and homeowners insurance in Texas. Spyglass Insurance Agency is independent, so we can compare the carriers we represent against your renewal and explain the tradeoffs in deductibles and coverage. We can't promise savings; sometimes staying put is the right call.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Are Texas homeowners insurance rates going down in 2026?",
+        a: "For some insurers, yes. TDI said filed homeowners rate changes over the 90 days before October 8, 2026 averaged a 4.3% decrease. But six of the ten largest Texas homeowners insurers filed increases in 2026, so results depend on your carrier.",
+      },
+      {
+        q: "Did State Farm and Allstate raise homeowners rates in Texas in 2026?",
+        a: "According to FiledRates' October 15, 2026 analysis of TDI data, State Farm Lloyds filed a 4.0% increase (pending) and Allstate Vehicle and Property Insurance Company filed an 8.0% increase in 2026.",
+      },
+      {
+        q: "How can I see my insurer's rate filing?",
+        a: "TDI publishes home and auto insurance rate filings online, and you can search them by company on TDI's website.",
+      },
+      {
+        q: "Do Texas insurers give discounts for FORTIFIED or impact-resistant roofs?",
+        a: "Many offer mitigation credits, and TDI Bulletin B-0008-26 encourages insurers to offer meaningful discounts for FORTIFIED Home construction, impact-resistant roofing and wildfire mitigation. Amounts vary by company, so ask each carrier.",
+      },
+      {
+        q: "Does my insurer have to explain a nonrenewal?",
+        a: "Yes. Under HB 2067, Texas insurers must tell you in writing why they declined, canceled or didn't renew your home insurance, for decisions after January 1, 2026.",
+      },
+    ],
+    related: [
+      { slug: "texas-fair-plan-wind-hail-deductible", label: "Can you still get a 1% wind and hail deductible from the Texas FAIR Plan?" },
+      { slug: "why-texas-homeowners-rates-change", label: "Why Texas homeowners insurance rates change" },
+    ],
+    sources: [
+      { label: "FiledRates, “Texas homeowners rate cuts now outnumber increases. Most of the biggest insurers still raised.” (October 15, 2026)", url: "https://filedrates.com/analysis/2026/10/texas-homeowners-rate-filings-2023-2026/" },
+      { label: "Texas Department of Insurance, “Home and auto insurance rates trending down for many Texans” (October 8, 2026)", url: "https://www.tdi.texas.gov/news/2026/tdi10082026.html" },
+      { label: "Texas Department of Insurance, Commissioner's Bulletin B-0008-26 (September 16, 2026)", url: "https://www.tdi.texas.gov/Bulletins/2026/commissioners-bulletin-b-0008-26.html" },
+      { label: "Texas Department of Insurance, “Know why your auto or home policy was declined, canceled, not renewed” (February 24, 2026)", url: "https://www.tdi.texas.gov/news/2026/tdi02232026.html" },
     ],
   },
 ];
