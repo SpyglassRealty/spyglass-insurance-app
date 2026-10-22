@@ -316,6 +316,198 @@ export const ARTICLES = [
       { label: "Texas Department of Insurance, “Know why your auto or home policy was declined, canceled, not renewed” (February 24, 2026)", url: "https://www.tdi.texas.gov/news/2026/tdi02232026.html" },
     ],
   },
+  {
+    slug: "solar-panels-texas-home-insurance",
+    datePublished: "2026-10-22",
+    author: "Spyglass Insurance Agency",
+    answer:
+      "Solar panels can raise your Texas home insurance premium, mostly because owned panels can increase the amount it costs to rebuild your home, and you may need a higher dwelling limit to cover them. Whether you own them or lease them (or buy power under a PPA) changes who insures the panels. Either way, tell your insurer before or right after installation and confirm how your policy treats them.",
+    tag: "Coverage",
+    title: "Do solar panels raise my Texas home insurance, and what do I tell my insurer?",
+    dek: "Owned vs. leased panels, roof-mounted vs. ground-mounted, hail, roof age, and the questions to ask before you sign.",
+    img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80",
+    readMinutes: 6,
+    sections: [
+      {
+        h: "Will solar panels change my premium?",
+        p: [
+          "They can. Insurers commonly describe owned, roof-mounted panels as part of the house, so the cost of the system becomes part of what it would take to rebuild. Amica notes you may need to raise your coverage limit to cover the system, which could lead to a higher premium depending on how much coverage you add. Nationwide makes the same point: you may need to increase coverage on your home to account for the system, which can raise your premium.",
+          "There is no single answer for every company. HSB, a Munich Re company, puts it plainly: different insurers may view the risks of a rooftop system differently, so ask your agent.",
+        ],
+      },
+      {
+        h: "Owned vs. leased panels or a PPA",
+        p: [
+          "If you bought your system (cash or financed), the panels are your property, and your homeowners policy is usually where they are covered.",
+          "If you lease the panels or have a power purchase agreement (PPA), the solar company typically owns them. Allstate says leased panels are owned by the leasing company, which must maintain and insure them. Amica says leasing companies often carry their own coverage, and suggests discussing insurance with the leasing company up front. Progressive adds that some leasing companies may require you to insure the panels yourself, so read your contract.",
+          "Texas requires solar sellers and lessors to give you written disclosures. The Texas Department of Licensing and Regulation (TDLR) consumer disclosure form identifies the transaction type (purchase, lease, PPA and others) and asks who is responsible for maintenance, including roof removal and reinstallation. Keep that form; your insurer may ask what kind of agreement you have.",
+        ],
+      },
+      {
+        h: "Roof-mounted vs. ground-mounted",
+        p: [
+          "Roof-mounted panels and solar shingles are typically treated as part of the dwelling, subject to your policy's limits and exclusions, according to Amica.",
+          "Ground-mounted arrays and solar carports are a different case. TDI explains that other structures coverage pays for structures on your property that aren't attached to your house, like detached garages, sheds and fences. Progressive says ground-mounted panels may be covered under other structures coverage, and Nationwide notes that for structures separated from the house, the limit may be 10% of the dwelling limit, and that ground-mounted systems may need an add-on or separate policy. If you have a large ground array, check whether your other structures limit is enough.",
+        ],
+      },
+      {
+        h: "Hail and storm damage",
+        p: [
+          "Central Texas sees hail. Amica lists wind, hail or flying debris that cracks or breaks panels among the sudden, accidental damage a standard policy may cover. It also lists what usually isn't covered: mechanical breakdown, wear and tear, poor installation, and lost energy production.",
+          "Remember your deductible. TDI suggests asking whether your wind and hail deductible is different from the deductible for other damage; if it is, you might pay more out of pocket after a storm.",
+        ],
+      },
+      {
+        h: "Your roof's age matters more with panels on it",
+        p: [
+          "TDI says some policies pay the full cost to repair a roof at current prices (replacement cost), while others pay less if the roof is older or worn (actual cash value). As roofs age, some companies switch roof coverage to actual cash value, and a roof in poor condition might not be covered at all. TDI also says your insurer will inspect your roof when you apply and may charge more or refuse coverage based on what it sees.",
+          "Panels sit on top of that roof. If the roof will need replacing in the next few years, ask your installer about it first, and check who pays to remove and reinstall the panels (the TDLR disclosure form asks this question for leases and PPAs). An insurer won't pay for a new roof just because it's old or worn out, TDI notes.",
+        ],
+      },
+      {
+        h: "What to tell your insurer",
+        p: [
+          "1) That you added solar, and the date it was installed.\n2) Whether you own, finance, lease, or have a PPA, and the solar company's name.\n3) Roof-mounted or ground-mounted, and the installed cost of the system.\n4) Your roof's age and material.\nThen ask: Is the system covered under dwelling or other structures? Do I need a higher limit? Are panels on replacement cost or actual cash value? What is my wind and hail deductible?",
+          "Progressive's advice is simple: whether you buy or lease, tell your insurance company you've installed solar panels.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Do solar panels raise home insurance in Texas?",
+        a: "They can. Owned panels can raise the cost to rebuild your home, and if you increase your dwelling limit to cover them, your premium may go up. How much depends on the insurer and how much coverage you add.",
+      },
+      {
+        q: "Does my homeowners policy cover leased solar panels?",
+        a: "Usually not the panels themselves. Leased panels are typically owned and insured by the leasing company, but some contracts require you to insure them, so read your lease and tell your insurer.",
+      },
+      {
+        q: "Are ground-mounted solar panels covered?",
+        a: "Ground-mounted systems are not attached to the house, so they may fall under other structures coverage, which can have a lower limit. Ask whether your limit is high enough or whether you need an add-on.",
+      },
+      {
+        q: "Will insurance pay if hail breaks my solar panels?",
+        a: "Hail damage to owned panels may be covered as sudden, accidental damage, subject to your deductible and policy terms. Wear and tear, poor installation, and lost energy production are typically not covered.",
+      },
+      {
+        q: "Should I replace my roof before installing solar?",
+        a: "It's worth considering. Older roofs may be covered at actual cash value or not at all, and replacing a roof later means removing and reinstalling the panels. Ask your installer and your agent before you sign.",
+      },
+    ],
+    related: [
+      { slug: "shopping-texas-homeowners-renewal", label: "Shopping your Texas homeowners renewal: rates are mixed, so check your carrier" },
+      { slug: "why-texas-homeowners-rates-change", label: "Why Texas homeowners insurance rates change" },
+      { slug: "texas-homebuyer-homeowners-insurance", label: "What every Texas homebuyer should know about insurance" },
+    ],
+    sources: [
+      { label: "Texas Department of Insurance, “Insurance and your roof: What to know when buying a policy or filing a claim”", url: "https://tdi.texas.gov/tips/replacing-your-roof.html" },
+      { label: "Texas Department of Insurance, “Home insurance guide”", url: "https://tdi.texas.gov/pubs/consumer/cb025.html" },
+      { label: "Texas Department of Licensing and Regulation, Texas Residential Solar Retail Transaction: Consumer Disclosure Statement (PDF)", url: "https://www.tdlr.texas.gov/residential-solar-retailers/pdf/solar-disclosure-form.pdf" },
+      { label: "Amica, “Does Home Insurance Cover Solar Panels?”", url: "https://www.amica.com/resources/home/solar-panel-insurance-coverage" },
+      { label: "Nationwide, “Does Homeowners Insurance Cover Solar Panels?”", url: "https://www.nationwide.com/lc/resources/home/articles/solar-panel-insurance" },
+      { label: "Allstate, “Does my homeowners insurance cover solar panels?”", url: "https://www.allstate.com/resources/home-insurance/solar-panels" },
+      { label: "Progressive, “Does Home Insurance Cover Solar Panels?”", url: "https://www.progressive.com/answers/does-home-insurance-cover-solar-panels/" },
+      { label: "HSB (Munich Re), “Insurance considerations for residential rooftop solar” (PDF)", url: "https://www.munichre.com/content/dam/munichre/hsb/hsb-iic/documents/hsb-insurance-considerations-for-residential-rooftop-solar.pdf/_jcr_content/renditions/original./hsb-insurance-considerations-for-residential-rooftop-solar.pdf" },
+    ],
+  },
+  {
+    slug: "wildfire-risk-insurance-west-austin-hill-country",
+    datePublished: "2026-10-22",
+    author: "Spyglass Insurance Agency",
+    answer:
+      "Insurers look at where your home sits relative to wildland vegetation, the terrain and fuels around it, how close other structures are, and how the house itself is built, especially the roof, vents and the first few feet around the walls. Owners can't change their location, but they can harden the home against embers and manage vegetation, and should ask each insurer what wildfire mitigation credits it offers.",
+    tag: "Wildfire",
+    title: "What do insurers check for wildfire risk on a west Austin or Hill Country home?",
+    dek: "The wildland-urban interface, defensible space, ember-resistant features, how wildfire risk gets scored, and free tools to check your own property.",
+    img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80",
+    readMinutes: 7,
+    sections: [
+      {
+        h: "Why wildfire is an insurance question in Central Texas",
+        p: [
+          "The Texas A&M Forest Service says rapid population growth into the wildland-urban interface (WUI), where wildland meets developed land, along with more frequent elevated wildfire conditions, increases the risk of devastating wildfires in Texas. TDI points to the 2011 Bastrop County fire, the most destructive wildfire in Texas history, which destroyed more than 1,600 homes.",
+          "The Forest Service's statewide risk assessment describes the Hill Country's limestone hills, the band of timber along the Balcones Escarpment, and brush and grasses farther west. It notes that in the Bastrop fire, embers from burning wildland fuels ignited vulnerable structures and caused structure-to-structure fire spread.",
+        ],
+      },
+      {
+        h: "How insurers score wildfire risk",
+        p: [
+          "Each company sets its own underwriting rules, so one insurer may offer a policy when another won't, TDI explains. Its home insurance guide lists common rating factors, including your home's age and condition, construction materials, where you live, and availability of local fire protection.",
+          "For wildfire specifically, the National Association of Insurance Commissioners (NAIC) says a wildfire model typically considers factors such as ignition, fuel, temperature, humidity, seasonal wind, land use and land cover, the wildland-urban interface, embers and smoke, fire detection and suppression, building construction and materials, and policy terms. The NAIC also noted that insurers still rely largely on historical loss experience by region for wildfire rating.",
+          "Public risk tools use similar ingredients. Austin Fire's Wildfire Division says its risk calculation considers proximity to wildland, structure separation distance, topography and fuels. The Forest Service's risk layers include housing unit risk, which combines wildfire likelihood with potential consequences to homes, and an index of ember load to buildings. Insurers' own scores are proprietary and can differ from these public tools.",
+        ],
+      },
+      {
+        h: "Location: the wildland-urban interface",
+        p: [
+          "Inside the City of Austin, the Wildland-Urban Interface Code sorts structures into proximity zones: Zone A is 50 feet or closer to wildland; Zone B is more than 50 and up to 150 feet; Zone C is more than 150 feet and up to 1.5 miles from 750 acres or more of wildland, or up to half a mile from 40 acres or more. The city says more than half of Austin falls into one of the three zones.",
+          "The code applies to new construction and development; the city says existing buildings don't have to be updated (except when a code official finds a serious safety hazard), and it does not apply to properties entirely in the extraterritorial jurisdiction (ETJ). Even so, the zone map is a useful way to see how close a property is to wildland.",
+        ],
+      },
+      {
+        h: "The house itself: roof, vents and ember entry",
+        p: [
+          "NFPA's Firewise program says research points to embers and small flames as the main way most homes ignite in wildfires, and that embers can be carried more than a mile by the wind.",
+          "Features that resist embers show up in Austin's WUI Code requirements for homes near wildland: Class A rated roof coverings, metal flashing in roof valleys, ember-resistant mesh with 1/8-inch openings on vents, noncombustible gutters with leaf guards, and tempered or dual-pane glass. TDI also suggests considering roofing materials less likely to be damaged by wind, hail or fire, and says your insurer might give you a discount for them.",
+        ],
+      },
+      {
+        h: "Defensible space: the home ignition zone",
+        p: [
+          "NFPA says homes ignite because of the condition of the home and everything around it, up to 200 feet from the foundation, an area it calls the home ignition zone.",
+          "Immediate zone (0 to 5 feet): keep it noncombustible. Clean roofs and gutters, screen vents with 1/8-inch metal mesh, and move mulch, flammable plants, leaves and firewood away from walls. Austin's code calls a similar five-foot noncombustible area around new structures the Ember Ignition Zone.\nIntermediate zone (5 to 30 feet): use driveways and walkways as fuel breaks, keep grass mowed to about four inches, and remove ladder fuels under trees.\nExtended zone (30 to 100 feet, out to 200): remove dead plant material and heavy ground litter, and space tree canopies apart.",
+        ],
+      },
+      {
+        h: "What owners can do",
+        p: [
+          "1) Check your property on the Texas Wildfire Risk Assessment Portal, where TDI says you can enter your address to see the risk for your property and surrounding area.\n2) In Austin and Travis County, view your property's score and request a free, confidential Structure Ignition Zone Evaluation (SIZE) from Austin Fire's Wildfire Division at ATXWildfireHub.com. Specialists walk the exterior and assess vulnerability to embers, direct flame and radiant heat.\n3) Work through the immediate zone first, as NFPA recommends.\n4) Keep records and photos of mitigation work and roof upgrades, and share them with your agent.\n5) Ask each insurer what wildfire mitigation credits it offers.",
+          "On that last point: TDI Commissioner's Bulletin B-0008-26 (September 16, 2026) encouraged insurers to develop meaningful premium discounts for homeowners who invest in loss mitigation, including proactively protecting against wildfire, and to inform policyholders of credits available for wildfire mitigation. The bulletin encourages discounts; it doesn't set an amount, so offers vary by company.",
+          "Nationally, the Insurance Institute for Business & Home Safety (IBHS) runs a Wildfire Prepared Home designation, a science-based standard for reducing parcel-level wildfire risk. Ask whether a carrier recognizes it before paying for an evaluation.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How do insurers decide wildfire risk for my home?",
+        a: "Companies use their own underwriting rules and models. The NAIC says wildfire models typically weigh fuel, weather, wind, land cover, the wildland-urban interface, embers, fire suppression, and building construction and materials.",
+      },
+      {
+        q: "How can I check my home's wildfire risk in Texas?",
+        a: "Enter your address on the Texas A&M Forest Service's Texas Wildfire Risk Assessment Portal. In Austin, ATXWildfireHub.com shows a property risk score and lets you request a free Structure Ignition Zone Evaluation.",
+      },
+      {
+        q: "What is defensible space?",
+        a: "It's the area around your home managed to slow fire and keep embers from igniting it. NFPA divides it into the immediate (0-5 feet), intermediate (5-30 feet) and extended (30-200 feet) zones.",
+      },
+      {
+        q: "Does Austin's WUI Code require me to retrofit my existing home?",
+        a: "No. The City of Austin says existing buildings do not need to be changed unless a code official finds a serious safety hazard. The code applies to new construction and development in the city.",
+      },
+      {
+        q: "Do Texas insurers give discounts for wildfire mitigation?",
+        a: "Some may. TDI Bulletin B-0008-26 encourages insurers to offer meaningful discounts for wildfire mitigation and to tell policyholders about available credits, but it doesn't require a set amount. Ask each carrier.",
+      },
+    ],
+    related: [
+      { slug: "shopping-texas-homeowners-renewal", label: "Shopping your Texas homeowners renewal: rates are mixed, so check your carrier" },
+      { slug: "texas-fair-plan-wind-hail-deductible", label: "Can you still get a 1% wind and hail deductible from the Texas FAIR Plan?" },
+      { slug: "why-texas-homeowners-rates-change", label: "Why Texas homeowners insurance rates change" },
+    ],
+    sources: [
+      { label: "Texas A&M Forest Service, “Wildfire Risk”", url: "https://tfsweb.tamu.edu/wildfire-and-other-disasters/burn-bans-and-information/wildfire-risk/" },
+      { label: "Texas A&M Forest Service, “Statewide Assessment of Economic and Environmental Risk from Wildfire in Texas” (PDF)", url: "https://tfsweb.tamu.edu/wp-content/uploads/2025/04/StatewideAssessmentofEconomicandEnvironmentalRiskfromWildfireinTexas.pdf" },
+      { label: "Texas Department of Insurance, “Do you know your home’s wildfire risk?”", url: "https://www.tdi.texas.gov/blog/do-you-know-your-homes-wildfire-risk.html" },
+      { label: "Texas Department of Insurance, “Home insurance guide”", url: "https://tdi.texas.gov/pubs/consumer/cb025.html" },
+      { label: "Texas Department of Insurance, “Insurance and your roof”", url: "https://tdi.texas.gov/tips/replacing-your-roof.html" },
+      { label: "Texas Department of Insurance, Commissioner's Bulletin B-0008-26 (September 16, 2026)", url: "https://www.tdi.texas.gov/Bulletins/2026/commissioners-bulletin-b-0008-26.html" },
+      { label: "City of Austin, Austin Fire Department, “Wildland-Urban Interface Code”", url: "https://www.austintexas.gov/fire/wildland-urban-interface-code" },
+      { label: "City of Austin, “Free Wildfire Preparedness Resources from Austin Fire’s Wildfire Division”", url: "https://www.austintexas.gov/development-services/building-connections/free-wildfire-preparedness-resources-austin-fires" },
+      { label: "NFPA Firewise USA, “Preparing homes for wildfire”", url: "https://www.nfpa.org/education-and-research/wildfire/preparing-homes-for-wildfire" },
+      { label: "NAIC, “Wildfire: An Issue Paper” (PDF)", url: "https://content.naic.org/sites/default/files/inline-files/Wildfire.IssuePaper_0.pdf" },
+      { label: "IBHS, 2025 Wildfire Prepared Home Technical Standard (PDF)", url: "https://wildfireprepared.org/wp-content/uploads/WFPH-Standard.pdf" },
+    ],
+  },
 ];
 
 export function getArticle(slug) {
