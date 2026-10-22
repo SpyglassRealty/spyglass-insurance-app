@@ -1,4 +1,4 @@
-import { ARTICLES } from "./lib/articles";
+import { getAllArticles } from "./lib/content";
 import { SITE_URL } from "./lib/site";
 
 // Static marketing + legal pages. Add new routes here when they are created.
@@ -13,7 +13,9 @@ const STATIC_ROUTES = [
   { path: "/accessibility", priority: 0.2, changeFrequency: "yearly" },
 ];
 
-export default function sitemap() {
+export const revalidate = 300;
+
+export default async function sitemap() {
   const now = new Date();
   const pages = STATIC_ROUTES.map((r) => ({
     url: `${SITE_URL}${r.path === "/" ? "" : r.path}`,
@@ -21,7 +23,7 @@ export default function sitemap() {
     changeFrequency: r.changeFrequency,
     priority: r.priority,
   }));
-  const articles = ARTICLES.map((a) => ({
+  const articles = (await getAllArticles()).map((a) => ({
     url: `${SITE_URL}/learning/${a.slug}`,
     lastModified: new Date(a.dateModified || a.datePublished || now),
     changeFrequency: "monthly",

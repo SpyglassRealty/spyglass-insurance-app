@@ -1,21 +1,26 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ARTICLES, formatDate, getArticle } from "../../lib/articles";
+import { ARTICLES, formatDate } from "../../lib/articles";
+import { getAllArticles, getArticleBySlug } from "../../lib/content";
 import { cardImageProps, unsplash, unsplashSrcSet } from "../../lib/images";
 import { pageMetadata } from "../../lib/site";
 import { articleSchema, breadcrumbSchema, faqPageSchema } from "../../lib/schema";
 import JsonLd from "../../components/JsonLd";
 import { SiteFooter, SiteHeader } from "../../components/SiteChrome";
 
+// Hardcoded slugs prerender at build; CMS slugs render on first request and then ISR.
+export const revalidate = 300;
+export const dynamicParams = true;
+
 export function generateStaticParams() {
   return ARTICLES.map((a) => ({ slug: a.slug }));
 }
 
-export function generateMetadata({ params }) {
-  const article = getArticle(params.slug);
+export async function generateMetadata({ params }) {
+  const article = await getArticleBySlug(params.slug);
   if (!article) return { title: "Article" };
   return pageMetadata({
-    title: article.title,
+    title: article.metaTitle || article.title,
     description: article.dek,
     path: `/learning/${article.slug}`,
     type: "article",
@@ -23,11 +28,11 @@ export function generateMetadata({ params }) {
   });
 }
 
-export default function LearningArticlePage({ params }) {
-  const article = getArticle(params.slug);
+export default async function LearningArticlePage({ params }) {
+  const article = await getArticleBySlug(params.slug);
   if (!article) notFound();
 
-  const others = ARTICLES.filter((a) => a.slug !== article.slug);
+  const others = (await getAllArticles()).filter((a) => a.slug !== article.slug).slice(0, 6);
 
   return (
     <div className="si-page">
@@ -84,7 +89,13 @@ export default function LearningArticlePage({ params }) {
                 </p>
               </section>
             ) : null}
-            {article.sections.map((sec) => (
+            {article.bodyHtml ? (
+              <section
+                className="si-article-block si-article-cms"
+                dangerouslySetInnerHTML={{ __html: article.bodyHtml }}
+              />
+            ) : null}
+            {(article.sections || []).map((sec) => (
               <section key={sec.h} className="si-article-block">
                 <h2>{sec.h}</h2>
                 {sec.p.map((para) => (
@@ -132,6 +143,18 @@ export default function LearningArticlePage({ params }) {
                     </li>
                   ))}
                 </ul>
+                <p>
+                  <em>
+                    Educational information only, current as of the publish date. Not legal advice and
+                    not a guarantee of coverage, eligibility or rates; all policies are subject to
+                    underwriting and the terms of the policy.
+                  </em>
+                </p>
+              </section>
+            ) : null}
+
+            {article.source === "cms" && !article.sources?.length ? (
+              <section className="si-article-block">
                 <p>
                   <em>
                     Educational information only, current as of the publish date. Not legal advice and

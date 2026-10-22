@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ARTICLES } from "../lib/articles";
+import { getAllArticles } from "../lib/content";
 import { pageMetadata } from "../lib/site";
 import { cardImageProps } from "../lib/images";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
@@ -11,7 +11,10 @@ export const metadata = pageMetadata({
   path: "/learning",
 });
 
-export default function LearningIndexPage() {
+export const revalidate = 300;
+
+export default async function LearningIndexPage() {
+  const articles = await getAllArticles();
   return (
     <div className="si-page">
       <SiteHeader />
@@ -27,7 +30,7 @@ export default function LearningIndexPage() {
           </p>
 
           <div className="si-learn-grid" style={{ marginTop: 48 }}>
-            {ARTICLES.map((a) => (
+            {articles.map((a) => (
               <Link key={a.slug} href={`/learning/${a.slug}`} className="si-article">
                 <img className="si-article-img" alt="" {...cardImageProps(a.img)} />
                 <div className="si-article-body">
